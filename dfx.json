@@ -1,0 +1,21 @@
+{
+  "canisters": {
+    "landing_page": {
+      "frontend": {
+        "entrypoint": "src/landing_page/src/index.html"
+      },
+      "source": [
+        "src/landing_page/assets",
+        "dist/landing_page/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
