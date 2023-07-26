@@ -16,7 +16,8 @@ export const NAV_LINKS = {
     account: '/account',
     dashboard: '/',
     treasury:'/treasury',
-    groupJournal:'/groupjournal'
+    groupJournal:'/groupjournal',
+    features:'/features'
 };
 
 export const DEVICE_TYPES = {
