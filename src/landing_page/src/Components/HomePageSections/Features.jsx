@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Features.module.scss'
 import {BsApp, BsArchive, BsArrowRight, BsBadgeHd, BsLaptop, BsOctagonHalf, BsPeople} from 'react-icons/bs'
 import {SiChainlink} from 'react-icons/si'
 import { RiGitRepositoryPrivateLine, RiGovernmentLine } from 'react-icons/ri'
 import { AiFillControl } from 'react-icons/ai'
 import {TbBoxMultiple} from 'react-icons/tb'
+import { Link, Router, useLocation } from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 
 const Features = () => {
+    useEffect(()=>{
+        AOS.init({duration: 2000});
+      })
   return (
-    <div className={styles.container}>
+    <div 
+    data-aos='fade-up'
+    className={styles.container}>
         <div className={styles.inner}>
             
             <div className={styles.sectionOne}>
@@ -24,7 +32,13 @@ const Features = () => {
 
             <div className={styles.sectionTwo}>
                 <div>
-                 View Features <BsArrowRight/>    
+                    <Link
+                    className={styles.link} 
+                    style={{textDecoration:'none'}}
+                    to='/features'>
+                    View Features
+                    </Link>
+             <BsArrowRight/>    
                 </div>
             </div>
 

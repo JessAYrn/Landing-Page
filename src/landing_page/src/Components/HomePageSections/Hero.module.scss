@@ -9,7 +9,6 @@
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
-    
 }
 
 .inner .left h1{
@@ -58,4 +57,38 @@
     display: flex;
     align-items: center;
     letter-spacing: 1px;
+}
+
+@media screen and (max-width:700px) {
+	.container{
+		padding: 10px;
+	}
+    .inner{
+        margin-top: 50px;
+        flex-direction: column;
+    }
+    .inner .left{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .inner .right{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .subHero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        font-size: .7rem;
+    }
+    .left button{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }

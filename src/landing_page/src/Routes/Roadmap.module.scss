@@ -1,0 +1,47 @@
+.container{
+    width: 100%;
+    background-image: url('../../assets/bgSections.svg');
+    min-height: 100vh;
+}
+
+.inner{
+    max-width: 1200px;
+    margin: 0 auto;    
+    background-repeat: none;
+    background-position: center;
+    background-size: contain;
+}
+
+.headerArea{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.headerArea p{
+    color:#F2A900
+}
+
+.content{
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:700px) {
+    .headerArea{
+        width: 100%;
+      
+        padding-left: 0px;
+        padding-right:0px ;
+    }
+    .content{
+        max-width: 100%;
+    }
+    .headerArea h2{
+        font-size: 1.2rem;
+    }
+}

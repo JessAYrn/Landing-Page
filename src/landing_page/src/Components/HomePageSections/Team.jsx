@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Team.module.scss'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const teamInfo=[
     {
@@ -27,8 +29,13 @@ const teamInfo=[
 
 
 const Team = () => {
+    useEffect(()=>{
+        AOS.init({duration: 2000});
+      })
   return (
-    <div className={styles.container}>
+    <div 
+    data-aos='fade-up'
+    className={styles.container}>
              <h1
              style={{textAlign:'center', marginBottom:'30px'}}
              >Team</h1>

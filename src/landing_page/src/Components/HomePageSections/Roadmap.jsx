@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Roadmap.module.scss'
 import { BiArrowToRight } from 'react-icons/bi';
-
+import { BsArrowRight } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Roadmap = () => {
+    useEffect(()=>{
+        AOS.init({duration: 2000});
+      })
   return (
-    <div className={styles.container}>
+    <div 
+    data-aos='fade-up'
+    className={styles.container}>
         <div className={styles.inner}>
             <div className={styles.sectionOne}>
                <h3>Roadmap</h3>
 
-               <p>View Entire Roadmap <BiArrowToRight/></p> 
+               <p><Link 
+               className={styles.link} 
+               style={{textDecoration:'none'}}
+               to ='/roadmap'>View Entire Roadmap </Link><BsArrowRight/></p> 
             </div>
 
         <div className={styles.timelineitems}>

@@ -48,12 +48,32 @@
     overflow-y: auto;
 }
 
+.link{
+    text-decoration: none;
+    color: white;
+}
+
 .sectionTwo{
     width: 100%;
     display: flex;
     justify-content: flex-end;
     margin-top: 40px;
     margin-bottom: 30px;
+}
+.sectionTwo div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 150px;
+}
+.sectionTwo div:hover{
+    color: #F2A900;
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.sectionTwo .link:hover{
+    color: #F2A900;
 }
 
 .inner .sectionThree div:hover{
@@ -70,6 +90,20 @@
 }
 
 
-// .inner .sectionThree div p{
-
-// }
+@media screen and (max-width:700px) {
+    .container{
+        width: 100%;
+		padding: 10px;
+	}
+    .inner .sectionThree{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .inner .sectionThree div{
+        width: 100%;
+        margin: 0px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}

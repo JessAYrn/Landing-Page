@@ -4,11 +4,15 @@ import { Provider } from 'react-redux';
 import configureStore from './configureStore';
 import Router from './Router';
 import './index.scss'
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 
 const store = configureStore();
 
 ReactDOM.render(
-<Provider store={store}>
+    <HashRouter>
+    <Provider store={store}>
     <Router />
 </Provider>
+    </HashRouter>
+
 , document.getElementById('root'));

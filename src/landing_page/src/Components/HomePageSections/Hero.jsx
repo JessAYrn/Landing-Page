@@ -9,7 +9,7 @@ const Hero = () => {
             <div className={styles.left}>
             <img
             className={styles.heroLogo}
-                src='https://pbs.twimg.com/profile_images/1679231966598557696/p6EFLZuc_400x400.jpg'
+                src='https://cdn.discordapp.com/attachments/1077489091840585800/1131676403272790176/P2.png'
                 /> 
                 <h1>Personal Dao<span style={{color:' #F2A900'}}>.</span></h1>
 

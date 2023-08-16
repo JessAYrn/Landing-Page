@@ -16,3 +16,20 @@
 .accordionContainer{
     width:60vw;
 }
+
+@media screen and (max-width:700px) {
+	.container{
+		padding: 20px;
+        margin-top: 50px;
+	}
+	.inner {
+        flex-direction: column;
+    }
+    .accordionContainer{
+        width: 100%;
+    }
+    .inner h1{
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+}

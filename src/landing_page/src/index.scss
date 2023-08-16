@@ -20,5 +20,39 @@ button{
     border: none;
     padding: 10px;
     font-size: 1rem;
-
 }
+
+
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: #f7931a;
+    outline: 1px solid slategrey;
+  }
+
+
+  .slide-in{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#0f0f0f;
+    transform-origin: bottom;
+  }
+
+  .slide-out{
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100vh;
+    background:#0f0f0f;
+    transform-origin: top;
+  }

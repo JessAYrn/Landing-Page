@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './FAQs.module.scss'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const FAQs = () => {
+  useEffect(()=>{
+    AOS.init({duration: 2000});
+  })
   return (
-    <div className={styles.container}>
+    <div 
+    data-aos='fade-up'
+    className={styles.container}>
         <div className={styles.inner}>
         <h1>
             Frequently Asked Questions

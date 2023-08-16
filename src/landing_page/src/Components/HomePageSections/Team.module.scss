@@ -30,6 +30,17 @@
     color: #F2A900;
 }
 
-.box p{
-
+@media screen and (max-width:700px) {
+	.container{
+		padding: 10px;
+	}
+    .inner{
+        flex-direction: column;
+    }
+    .box{
+        width: 100%;
+        margin: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
