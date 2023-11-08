@@ -1,14 +1,9 @@
 {
   "canisters": {
-    "ledger": {
-      "type": "custom",
-      "wasm": "ledger.wasm",
-      "candid": "ledger.public.did"
-  },
-  "internet_identity": {
+    "internet_identity": {
       "type": "custom",
       "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
-      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
       "shrink": false,
       "remote": {
         "candid": "internet_identity.did",
@@ -21,10 +16,7 @@
       "frontend": {
         "entrypoint": "src/landing_page/src/index.html"
       },
-      "source": [
-        "src/landing_page/assets",
-        "dist/landing_page/"
-      ],
+      "source": ["src/landing_page/assets", "dist/landing_page/"],
       "type": "assets"
     }
   },
