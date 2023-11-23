@@ -1,37 +1,35 @@
-import React from 'react'
-import styles from './Hero.module.scss'
-
+import React from "react";
+import styles from "./Hero.module.scss";
+import { Link, useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.container}>
-        <div className={styles.inner}>
-            <div className={styles.left}>
+      <div className={styles.left}>
+        <h1 className={styles.header_title}>Personal Dao</h1>
+        <h2>
+          Own the keys to your own personal treasury and data storage.
+          Non-custodial, Non-fungible DApp.
+        </h2>
+
+        <a target="_blank" href="https://discord.gg/45qhqMKbBf">
+          <button className={styles.button}>Join Discord</button>
+        </a>
+
+        <p className={styles.subHero}>
+          100% on $ICP
+          <span>
             <img
-            className={styles.heroLogo}
-                src='https://cdn.discordapp.com/attachments/1077489091840585800/1131676403272790176/P2.png'
-                /> 
-                <h1>Personal Dao<span style={{color:' #F2A900'}}>.</span></h1>
-
-                <h1>Non-custodial, Non-fungible Application. Own the keys to your own personal treasury and data storage</h1>
-
-                <button>Purchase App</button>
-
-                <p
-                className={styles.subHero}
-                >100% on $ICP,<span><img 
-                className={styles.icpLogo}
-                src='https://cryptologos.cc/logos/internet-computer-icp-logo.png'/></span> complete with a unique URL.</p>
-            </div>
-
-            <div className={styles.right}>
-                <img
-                src='https://cdn.discordapp.com/attachments/1077489091840585800/1131676403272790176/P2.png'
-                />
-            </div>
-        </div>
+              className={styles.icpLogo}
+              src="https://cryptologos.cc/logos/internet-computer-icp-logo.png"
+            />
+          </span>{" "}
+          complete with a unique URL.
+        </p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

@@ -1,70 +1,60 @@
-/* .container{
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-    transition: all 0.5s;
-    scroll-behavior: smooth;
-} */
-
-.container{
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: flex-start;
-    min-height: 100vh;
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 50px;
 }
 
-.title{
-    padding-top: 20px;   
-    padding-bottom: 20px;   
-    font-size: 1.5rem;
-    color:gray;
-    list-style: none;
+.title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+  color: gray;
+  list-style: none;
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 
-.left{
-    color: white;
-    width: 40%;
+.left {
+  color: white;
+  width: 40%;
 }
 
-.right{
-    position: sticky;
-    border-radius: 10px;
-    width: 40%;
-    height: 100vh;
-    top: 0;
-    display: flex;
-    align-items: center;
+.right {
+  position: sticky;
+  border-radius: 10px;
+  width: 40%;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  align-items: center;
 }
 
-.right div{
-    width: 300px;
-    height: 40vh;
-    /* position: relative; */
-    border-radius: 10px;
+.right div {
+  width: 300px;
+  height: 40vh;
+  border-radius: 10px;
 }
 
-.block{
-    color: transparent;
+.block {
+  color: transparent;
 }
 
-@media screen and (max-width:1200px) {
-    
-    .right div{
-        margin-top: 0%;
-        height: 300px;
-        width: 100%;
-    }
+@media screen and (max-width: 1200px) {
+  .right div {
+    margin-top: 0%;
+    height: 300px;
+    width: 100%;
+  }
 }
 
-
-@media screen and (max-width:1200px){
-    .container{
-        padding: 10px;
-    }
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 10px;
+  }
 }

@@ -5,11 +5,15 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 let localCanisters, prodCanisters, canisters;
-let LOCAL_II_CANISTER_ID = 'rrkah-fqaaa-aaaaa-aaaaq-cai';
+let LOCAL_II_CANISTER_ID = "rrkah-fqaaa-aaaaa-aaaaq-cai";
 
 function initCanisterIds() {
   try {
-    localCanisters = require(path.resolve(".dfx", "local", "canister_ids.json"));
+    localCanisters = require(path.resolve(
+      ".dfx",
+      "local",
+      "canister_ids.json"
+    ));
   } catch (error) {
     console.log("No local canister_ids.json found. Continuing production");
   }
@@ -33,12 +37,7 @@ function initCanisterIds() {
 initCanisterIds();
 
 const isDevelopment = process.env.NODE_ENV !== "production";
-const asset_entry = path.join(
-  "src",
-  "landing_page",
-  "src",
-  "index.html"
-);
+const asset_entry = path.join("src", "landing_page", "src", "index.html");
 
 module.exports = {
   target: "web",
@@ -74,29 +73,29 @@ module.exports = {
   // modules and CSS as described in the "Adding a stylesheet"
   // tutorial, uncomment the following lines:
   module: {
-   rules: [
-     { test: /\.(ts|tsx|jsx)$/, loader: "ts-loader" },
-     {
-      test: /\.css$/i,
-      use: ["style-loader", "css-loader"],
-     },
-     {
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader']
-    }
-   ]
+    rules: [
+      { test: /\.(ts|tsx|jsx)$/, loader: "ts-loader" },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, asset_entry),
-      cache: false
+      cache: false,
     }),
     new webpack.EnvironmentPlugin({
-      NODE_ENV: 'development',
-      LANDING_PAGE_CANISTER_ID: canisters["llanding_page"],
-      II_URL : isDevelopment ?
-      `http://localhost:8000?canisterId=${LOCAL_II_CANISTER_ID}#authorize` :
-      "https://identity.ic0.app/#authorize",
+      NODE_ENV: "development",
+      LANDING_PAGE_CANISTER_ID: canisters["landing_page"],
+      II_URL: isDevelopment
+        ? `http://localhost:8000?canisterId=${LOCAL_II_CANISTER_ID}#authorize`
+        : "https://identity.ic0.app/#authorize",
     }),
     new webpack.ProvidePlugin({
       Buffer: [require.resolve("buffer/"), "Buffer"],
@@ -117,8 +116,8 @@ module.exports = {
     hot: true,
     static: {
       directory: path.join(__dirname, "./src/landing_page"),
-      watch: true
+      watch: true,
     },
-    port: 3000
+    port: 3000,
   },
 };
