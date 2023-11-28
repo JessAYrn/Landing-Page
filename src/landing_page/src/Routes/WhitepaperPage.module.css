@@ -21,7 +21,7 @@
   display: flex;
   width: 100%;
   align-items: center;
-  padding: 20px 0px 20px 100px;
+  padding: 20px 0px 20px 0px;
   justify-content: center;
   color: #f2a900;
 }

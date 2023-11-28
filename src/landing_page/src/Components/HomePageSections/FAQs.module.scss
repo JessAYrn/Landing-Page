@@ -36,7 +36,11 @@
     width: 100%;
   }
   .inner h1 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
   }
 }

@@ -11,7 +11,7 @@ const WhitepaperPage = () => {
         <HeroSection text="Whitepaper" />
 
         <div className={styles.inner}>
-          <p
+          {/* <p
             className={styles.content}
             style={{ fontStyle: "italic", fontSize: "12px" }}
           >
@@ -27,7 +27,26 @@ const WhitepaperPage = () => {
             }}
           >
             Written and Founded by Jesse D. Williams Jr.
-          </p>
+          </p> */}
+          <span
+            style={{
+              fontStyle: "italic",
+              paddingLeft: "20px",
+              paddingRight: "20px",
+            }}
+          >
+            A Non-custodial, private, peer-to-peer treasury & data storage
+            solution
+          </span>
+          <span
+            style={{
+              fontStyle: "italic",
+              paddingLeft: "20px",
+              paddingRight: "20px",
+            }}
+          >
+            Written and Founded by Jesse D. Williams Jr.
+          </span>
 
           {/* motivation */}
           <div>
@@ -160,33 +179,43 @@ const WhitepaperPage = () => {
                 software architecture that enables users to have true
                 custodianship of the entirety of the application that they rely
                 on for sending, receiving & storing their cryptocurrencies &
-                private data. When users purchase their own Personal DAO, they
+                private data. When users purchase their own{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span>, they
                 receive custodianship of the User Interface, The
                 Application-Program Interface and all smart contracts critical
-                to the functionality of the application. Each Personal DAO is
-                completely disjoint from all other Personal DAOs that exist.
-                This means that two people who purchase their own respective
-                Personal DAOs will have no point of centralization between their
-                assets/data.
+                to the functionality of the application. Each{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> is
+                completely disjoint from all other{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAOs</span> that
+                exist. This means that two people who purchase their own
+                respective
+                <span style={{ color: "#F7931A" }}>Personal DAOs</span> will
+                have no point of centralization between their assets/data.
               </p>
               <p>
                 Unlike MetaMask, where every user shares a single UI and API
                 that they use to access their individual wallets, with personal
                 DAO, every instance has its own UI and its own API that is used
                 to access only the assets of the users who have been permitted
-                to enter that particular Personal DAO. Consequently, the funds
-                stored in Personal DAOs are never accumulated into a single
-                protocol. This means that every Personal DAO deployed to the
-                Internet is its own individual protocol. This sort of
+                to enter that particular{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span>.
+                Consequently, the funds stored in{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAOs</span> are
+                never accumulated into a single protocol. This means that every{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> deployed
+                to the Internet is its own individual protocol. This sort of
                 architecture is inherently safer than all other wallet/DeFi
                 protocols currently in existence because it makes it impossible
                 for mass hacks to be carried out. Even in the event that a bad
-                actor finds a way to breach Personal DAO security protocols,
-                that bad actor still would be unable to execute mass hacks
-                against Personal DAO users because each DAO is a separate entity
-                that must be looted one by one. This makes targeting Personal
-                DAOs much less lucrative- resulting in a project that is
-                intrinsically safer than all other competitors.
+                actor finds a way to breach{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> security
+                protocols, that bad actor still would be unable to execute mass
+                hacks against{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> users
+                because each DAO is a separate entity that must be looted one by
+                one. This makes targeting Personal DAOs much less lucrative-
+                resulting in a project that is intrinsically safer than all
+                other competitors.
               </p>
             </div>
           </div>
@@ -197,44 +226,54 @@ const WhitepaperPage = () => {
               <p>
                 The crypto industry has created many successful, peer-to-peer
                 equivalents to the services that are most important within the
-                tradFi industry(i.e. trusts, treasuries & lending). Personal Dao
-                aims to take peer-to-peer financial services a step further by
-                providing retail investors with a tool that they can use to
-                pool, manage, and leverage funds within their own, interpersonal
-                communities while preserving the sovereignty of their
-                community’s funds 100%. Anyone who wants to be the founding
-                member to their very own Personal Dao is able to do so. As the
-                founding member, you’re able to invite whomever you wish to
-                become a fellow member of your Personal Dao. Unlike other Daos
-                that are available to anyone and everyone in the world, your
-                Personal Dao is only available to those who are permitted to
-                enter by you, the founding member.This means that the Dao
-                participants only consist of people that share <span>your</span>{" "}
-                interests, values and community. When you use your Personal DAO
-                for peer-to-peer financial services, you borrow funds against
-                your collateralized assets; it's <span>your</span> community
-                that you borrow from- consequently, it’s <span>your</span>{" "}
-                community that you enrich upon servicing your debts.
+                tradFi industry(i.e. trusts, treasuries & lending).{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> aims to
+                take peer-to-peer financial services a step further by providing
+                retail investors with a tool that they can use to pool, manage,
+                and leverage funds within their own, interpersonal communities
+                while preserving the sovereignty of their community’s funds
+                100%. Anyone who wants to be the founding member to their very
+                own <span style={{ color: "#F7931A" }}>Personal DAO</span> is
+                able to do so. As the founding member, you’re able to invite
+                whomever you wish to become a fellow member of your{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span>. Unlike
+                other Daos that are available to anyone and everyone in the
+                world, your
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> is only
+                available to those who are permitted to enter by you, the
+                founding member.This means that the Dao participants only
+                consist of people that share <span>your</span> interests, values
+                and community. When you use your{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> for
+                peer-to-peer financial services, you borrow funds against your
+                collateralized assets; it's <span>your</span> community that you
+                borrow from- consequently, it’s <span>your</span> community that
+                you enrich upon servicing your debts.
               </p>
               <p>
-                Personal Dao does more than just offer financial services- it’s
-                also a data storage solution. Every member of your Personal Dao
-                receives their own canister smart contract in which they are
-                able to keep a diary, secure notes, a private crypto wallet, an
-                address book, a file drive and more. This means that in addition
-                to storing things of monetary value, your community will also be
-                able to store things of sentimental value, all in one space.
-                Your Personal Dao will be able to transcend generations-
-                allowing those who follow you to inherit their history as well
-                as the wealth that their predecessors accrued.
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> does more
+                than just offer financial services- it’s also a data storage
+                solution. Every member of your{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> receives
+                their own canister smart contract in which they are able to keep
+                a diary, secure notes, a private crypto wallet, an address book,
+                a file drive and more. This means that in addition to storing
+                things of monetary value, your community will also be able to
+                store things of sentimental value, all in one space. Your{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> will be
+                able to transcend generations- allowing those who follow you to
+                inherit their history as well as the wealth that their
+                predecessors accrued.
               </p>
               <p>
                 In addition to offering peer-to-peer financial services and
-                secure data storage, personal DAO offers a means by which
-                communities within the Internet Computer’s ecosystem can
-                organize, deliberate and vote- all on one accord, in the best
-                interest of the collective. The purpose of this white paper is
-                to explain to you exactly how each Personal Dao works.
+                secure data storage,{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> offers a
+                means by which communities within the Internet Computer’s
+                ecosystem can organize, deliberate and vote- all on one accord,
+                in the best interest of the collective. The purpose of this
+                white paper is to explain to you exactly how each{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> works.
               </p>
             </div>
           </div>
@@ -243,10 +282,11 @@ const WhitepaperPage = () => {
             <h1 className={styles.headerArea}>Technical Details</h1>
             <div className={styles.content}>
               <p>
-                Personal DAO is hosted completely on the Internet Computer
-                Protocol Blockchain. The application consists of five different
-                smart contracts responsible for housing each of the five
-                components of the application. Those components are as follows:
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> is hosted
+                completely on the Internet Computer Protocol Blockchain. The
+                application consists of five different smart contracts
+                responsible for housing each of the five components of the
+                application. Those components are as follows:
               </p>
               <ol>
                 <li>
@@ -270,14 +310,16 @@ const WhitepaperPage = () => {
                 <li>
                   <span>Manager Canister</span>: This component of the
                   application is responsible for communicating with a canister
-                  that is responsible for storing new Personal DAO updates(aka
-                  the upgrade store canister). Whenever new updates are made
-                  available, the DAO members get to decide whether or not they
-                  wish to implement the new updates. In the event that consensus
-                  is reached in favor of implementingthe updates, the manager
-                  canister is responsible for retrieving those updates from the
-                  upgrade store canister and then promptly delivering those
-                  updates to the rest of the canisters within the protocol.
+                  that is responsible for storing new{" "}
+                  <span style={{ color: "#F7931A" }}>Personal DAO</span>{" "}
+                  updates(aka the upgrade store canister). Whenever new updates
+                  are made available, the DAO members get to decide whether or
+                  not they wish to implement the new updates. In the event that
+                  consensus is reached in favor of implementingthe updates, the
+                  manager canister is responsible for retrieving those updates
+                  from the upgrade store canister and then promptly delivering
+                  those updates to the rest of the canisters within the
+                  protocol.
                 </li>
                 <li>
                   <span>Treasury Canister </span>: This component of the
@@ -295,21 +337,26 @@ const WhitepaperPage = () => {
                 </li>
               </ol>
               <p>
-                For each Personal DAO that is deployed to the internet computer,
-                there is a single corresponding Founder’s NFT. Each Personal DAO
-                is configured to recognize its corresponding Founder’s NFT as
-                well as the principal of the wallet that holds said NFT. The
-                holder of the Founder’s NFT is given administrative privileges.
+                For each <span style={{ color: "#F7931A" }}>Personal DAO</span>{" "}
+                that is deployed to the internet computer, there is a single
+                corresponding Founder’s NFT. Each{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> is
+                configured to recognize its corresponding Founder’s NFT as well
+                as the principal of the wallet that holds said NFT. The holder
+                of the Founder’s NFT is given administrative privileges.
                 Tranferral of the Founder’s NFT results in transferral of
                 administrative privileges. A separate article detailing the
                 administrative privileges will be released at a later time.
               </p>
               <p>
-                There are many instances of Personal DAOs deployed to the
-                Internet Computer. Each Personal DAO that is deployed has its
-                own URL, UI canister, Backend Canister, Manager Canister,
-                Treasury Canister, and for each member within that Personal DAO,
-                there is a User Data Canister.
+                There are many instances of{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAOs</span> deployed
+                to the Internet Computer. Each{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> that is
+                deployed has its own URL, UI canister, Backend Canister, Manager
+                Canister, Treasury Canister, and for each member within that{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span>, there is
+                a User Data Canister.
               </p>
               <p>
                 Each backend canister is assigned as the controller for:
@@ -333,7 +380,8 @@ const WhitepaperPage = () => {
               </p>
               <p style={{ fontStyle: "italic" }}>
                 Note: both the backend canister and the manager canister are
-                controllers of all the canisters that comprise the Personal DAO,
+                controllers of all the canisters that comprise the{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span>,
                 including themselves respectively.
               </p>
               <p>

@@ -26,9 +26,9 @@ const Features = () => {
       <div className={styles.inner}>
         <div className={styles.sectionOne}>
           <h3>
-            Personal Dao is a non-custodial application that can be purchased,
-            owned, transferred and updated without the need for any coding
-            experience.
+            <span style={{ color: "#F7931A" }}>Personal DAO</span> is a
+            non-custodial application that can be purchased, owned, transferred
+            and updated without the need for any coding experience.
           </h3>
 
           <p>
@@ -51,10 +51,10 @@ const Features = () => {
             <h3>100 % on-chain</h3>
 
             <p>
-              Personal Dao is a web 3 application built on the Internet
-              Computer. Each copy consists of its own front-end canister (aka
-              User interface canister) and its own back-end canister (aka
-              database/ server canister)
+              <span style={{ color: "#F7931A" }}>Personal DAO</span> is a web 3
+              application built on the Internet Computer. Each copy consists of
+              its own front-end canister (aka User interface canister) and its
+              own back-end canister (aka database/ server canister)
             </p>
           </div>
 

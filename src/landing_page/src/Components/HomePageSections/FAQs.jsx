@@ -28,22 +28,26 @@ const FAQs = () => {
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "#F2A900" }} />}
+              expandIcon={<ExpandMoreIcon style={{ color: "#F7931A" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <h3>What is Personal Dao and what does it do?</h3>
+              <h3>
+                What is <span style={{ color: "#F7931A" }}>Personal DAO</span>{" "}
+                and what does it do?
+              </h3>
             </AccordionSummary>
             <AccordionDetails>
               <p>
-                Personal Dao is a web 3 application that is hosted completely on
-                the internet computer. The application is meant to be a private
-                server and treasury for owners of the utility NFTs and their
-                respective communities. Users will be able to store their
-                sentiments, files, photos, videos, contacts, passwords, secure
-                notes, and cryptocurrencies.​​​ Users will also be able to keep
-                a shared journal, and a shared treasury that is governed by
-                members of the treasury.
+                <span style={{ color: "#F7931A" }}>Personal DAO</span> is a web
+                3 application that is hosted completely on the internet
+                computer. The application is meant to be a private server and
+                treasury for owners of the utility NFTs and their respective
+                communities. Users will be able to store their sentiments,
+                files, photos, videos, contacts, passwords, secure notes, and
+                cryptocurrencies.​​​ Users will also be able to keep a shared
+                journal, and a shared treasury that is governed by members of
+                the treasury.
               </p>
             </AccordionDetails>
           </Accordion>
@@ -57,7 +61,7 @@ const FAQs = () => {
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "#F2A900" }} />}
+              expandIcon={<ExpandMoreIcon style={{ color: "#F7931A" }} />}
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
@@ -66,8 +70,9 @@ const FAQs = () => {
             <AccordionDetails>
               <ul style={{ padding: "10px" }}>
                 <li>
-                  Many instances of The Personal Dao application is deployed to
-                  the internet computer.
+                  Many instances of The{" "}
+                  <span style={{ color: "#F7931A" }}>Personal DAO</span>{" "}
+                  application is deployed to the internet computer.
                 </li>
                 <li>
                   Each instance of the application has its own unique front-end
@@ -108,11 +113,14 @@ const FAQs = () => {
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "#F2A900" }} />}
+              expandIcon={<ExpandMoreIcon style={{ color: "#F7931A" }} />}
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <h3>How can i own a copy of Personal DAO</h3>
+              <h3>
+                How can i own a copy of{" "}
+                <span style={{ color: "#F7931A" }}>Personal DAO</span>
+              </h3>
             </AccordionSummary>
             <AccordionDetails>
               <p>Join the discord</p>
@@ -128,7 +136,7 @@ const FAQs = () => {
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "#F2A900" }} />}
+              expandIcon={<ExpandMoreIcon style={{ color: "#F7931A" }} />}
               aria-controls="panel2a-content"
               id="panel2a-header"
             >

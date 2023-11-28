@@ -9,6 +9,7 @@ const navLinks = [
   { title: "Roadmap", href: "/roadmap" },
   { title: "Whitepaper", href: "/whitepaper" },
   { title: "Team", href: "/team" },
+  { title: "FAQs", href: "/faqs" },
   { title: "Architecture", href: "/architecture" },
   { title: "Media", href: "/blog" },
 ];

@@ -1,10 +1,9 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import { Link, useLocation } from "react-router-dom";
-import { FaBars, FaHamburger } from "react-icons/fa";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
-
+import { FaDiscord } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 const TestFooter = () => {
   const { pathname } = useLocation();
   const openInNewTab = (url) => {
@@ -27,16 +26,16 @@ const TestFooter = () => {
             </li>
           </ul>
           <IconButton
-            aria-label="LinkedIn"
-            onClick={() => openInNewTab("https://twitter.com/Personal_DAO")}
+            aria-label="discord"
+            onClick={() => openInNewTab("https://discord.gg/45qhqMKbBf")}
           >
-            <Facebook fontSize="small" sx={{ color: "white" }} />
+            <FaDiscord size="18px" color="white" />
           </IconButton>
           <IconButton
             aria-label="LinkedIn"
             onClick={() => openInNewTab("https://twitter.com/Personal_DAO")}
           >
-            <Twitter fontSize="small" sx={{ color: "white" }} />
+            <FaTwitter size="18px" color="white" />
           </IconButton>
         </div>
       </div>

@@ -13,7 +13,7 @@ import Team from "./Routes/Team";
 import MobileNav from "./Components/MobileNav/MobileNav";
 import Footer from "./Components/HomePageSections/Footer";
 import FAQs from "./Components/HomePageSections/FAQs";
-
+import Blog from "./Routes/Blog";
 const Router = (props) => {
   const location = useLocation();
   const [open, setOpen] = useState(false);
@@ -41,6 +41,14 @@ const Router = (props) => {
             element={
               <>
                 <Roadmap open={open} setOpen={setOpen} />
+              </>
+            }
+          />
+          <Route
+            path="/blog"
+            element={
+              <>
+                <Blog open={open} setOpen={setOpen} />
               </>
             }
           />

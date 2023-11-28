@@ -27,7 +27,10 @@ const Roadmap = () => {
                 <li>Treasury protocols</li>
                 <li>Governance protocols</li>
                 <li>Cycles replenishment service</li>
-                <li>Update delivery Upgrader protocols for Personal DAOs</li>
+                <li>
+                  Update delivery Upgrader protocols for{" "}
+                  <span style={{ color: "#F7931A" }}>Personal DAO</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -67,7 +70,10 @@ const Roadmap = () => {
                 <li>Push notifications</li>
                 <li>Community storage solution</li>
                 <li>Integrate on-ramp solution</li>
-                <li>Open source the Personal DAO code</li>
+                <li>
+                  Open source the{" "}
+                  <span style={{ color: "#F7931A" }}>Personal DAO</span> code
+                </li>
               </ul>
             </div>
           </div>
