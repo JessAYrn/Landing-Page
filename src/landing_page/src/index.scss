@@ -1,58 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Manrope:wght@200;300;400;500;600;700&display=swap');
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Manrope', sans-serif;
-    font-weight: 500;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Manrope:wght@200;300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "BodoniflfBold";
+  src: local("BodoniflfBold"),
+    url("../../../fonts/BodoniflfBold.ttf") format("truetype");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "BodoniflfBold", sans-serif;
+  font-weight: 500;
 }
 
-
-
-
-button{
-    background-color: #f7931a;
-    color: black;
-    padding-right:15px;
-    padding-left: 15px;
-    border-radius:5px;
-    border: none;
-    padding: 10px;
-    font-size: 1rem;
+button {
+  background-color: #ff8c00;
+  color: white;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
 }
-
 
 body::-webkit-scrollbar {
-    width: 10px;
-  }
-   
-  body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-   
-  body::-webkit-scrollbar-thumb {
-    background-color: #f7931a;
-    outline: 1px solid slategrey;
-  }
+  width: 10px;
+}
 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
 
-  .slide-in{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    background:#0f0f0f;
-    transform-origin: bottom;
-  }
+body::-webkit-scrollbar-thumb {
+  background-color: #f7931a;
+  outline: 1px solid slategrey;
+}
 
-  .slide-out{
-    position: fixed;
-    top:0;
-    left: 0;
-    width:100%;
-    height:100vh;
-    background:#0f0f0f;
-    transform-origin: top;
-  }
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: top;
+}
