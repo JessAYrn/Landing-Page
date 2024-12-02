@@ -1,33 +1,13 @@
 import React from "react";
-import { AppContext } from "./HomePage";
 import styles from "./WhitepaperPage.module.css";
 import { HeroSection } from "../Components/HeroSection";
-import transition from "../transition";
 
 const WhitepaperPage = () => {
   return (
-    <AppContext.Provider>
       <div className={styles.container}>
         <HeroSection text="Whitepaper" />
 
         <div className={styles.inner}>
-          {/* <p
-            className={styles.content}
-            style={{ fontStyle: "italic", fontSize: "12px" }}
-          >
-            A Non-custodial, private, peer-to-peer treasury & data storage
-            solution
-          </p>
-          <p
-            style={{
-              fontStyle: "italic",
-              justifyContent: "center",
-              alignContent: "center",
-              fontSize: "12px",
-            }}
-          >
-            Written and Founded by Jesse D. Williams Jr.
-          </p> */}
           <span
             style={{
               fontStyle: "italic",
@@ -47,8 +27,6 @@ const WhitepaperPage = () => {
           >
             Written and Founded by Jesse D. Williams Jr.
           </span>
-
-          {/* motivation */}
           <div>
             <h1 className={styles.headerArea}>Motivation</h1>
             <div className={styles.content}>
@@ -219,7 +197,6 @@ const WhitepaperPage = () => {
               </p>
             </div>
           </div>
-          {/* use case */}
           <div>
             <h1 className={styles.headerArea}>Use Case</h1>
             <div className={styles.content}>
@@ -408,52 +385,9 @@ const WhitepaperPage = () => {
               </p>
             </div>
           </div>
-
-          {/* canister architecture */}
-          {/* <div>
-            <h1 className={styles.headerArea}>Canister Architecture</h1>
-            <div className={styles.content}>
-              <p>
-                The diagram below illustrates the canister controller settings
-                for an instance of Personal DAO deployed to the Internet
-                Computer. The arrow indicates that a canister controls another,
-                with the canister on the pointed end of the arrow being the
-                controlled by the canister at the opposite end of the arrow.
-              </p>
-
-              <img
-                src="https://cdn.discordapp.com/attachments/950584476658962473/1174716488968572928/Screenshot_from_2023-11-16_15-57-36.png"
-                alt=""
-              />
-            </div>
-          </div> */}
-
-          {/* update propagations */}
-          {/* <div>
-            <h1 className={styles.headerArea}>Update Propagations</h1>
-            <div className={styles.content}>
-              <p>
-                The diagram below illustrates the mechanism by which Personal
-                DAOs are updated while preserving user sovereignty and canister
-                controller settings of each individual Personal DAO. The Updates
-                are directly uploaded to the master copy, which the dev team
-                maintains control over. From there, the Upgrades Store canister
-                pulls those updates from the master copy and stores them. The
-                other Personal DAO copies deployed to the internet computer may
-                then make a request for those updates and then install those
-                updates to themselves.
-              </p>
-
-              <img
-                src="https://cdn.discordapp.com/attachments/950584476658962473/1174716488679174214/Screenshot_from_2023-11-16_15-58-21.png"
-                alt=""
-              />
-            </div>
-          </div> */}
         </div>
       </div>
-    </AppContext.Provider>
   );
 };
 
-export default transition(WhitepaperPage);
+export default WhitepaperPage;

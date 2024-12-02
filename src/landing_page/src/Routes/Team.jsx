@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./Team.module.scss";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { HeroSection } from "../Components/HeroSection";
 
 const teamInfo = [
@@ -15,16 +13,6 @@ const teamInfo = [
     name: "Meta Owl",
     img: "https://pbs.twimg.com/profile_images/1674246321379717120/UQCUvFOp_400x400.jpg",
   },
-  // {
-  //     role:'Community Manager and Moderator',
-  //     name:'Milan Perry',
-  //     img:'https://pbs.twimg.com/profile_images/1638131146104926208/UndFs6JS_400x400.jpg'
-  // },
-  // {
-  //     role:'Frontend Developer',
-  //     name:'Lolu',
-  //     img:'https://pbs.twimg.com/profile_images/1564699051668430856/2RDwHx0N_400x400.jpg'
-  // },
   {
     role: "Software Developer",
     name: "Samuel",
@@ -33,11 +21,8 @@ const teamInfo = [
 ];
 
 const Team = () => {
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  });
   return (
-    <div data-aos="fade-up" className={styles.container}>
+    <>
       <HeroSection text="Team" />
       <div className={styles.inner}>
         {teamInfo.map((info, index) => (
@@ -49,7 +34,7 @@ const Team = () => {
         ))}
         <div></div>
       </div>
-    </div>
+    </>
   );
 };
 

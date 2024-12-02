@@ -1,25 +1,18 @@
-import React, { createContext } from "react";
-import { HeroSection } from "../Components/HeroSection";
-import { DEFAULT_APP_CONTEXTS } from "../functionsAndConstants/Constants";
-import Section from "../Components/Features/Section";
+import React from "react";
 import { BiNetworkChart } from "react-icons/bi";
 import { GoPeople } from "react-icons/go";
 import { FcMultipleSmartphones } from "react-icons/fc";
 import styles from "./Features.module.css";
-import transition from "../transition";
 import FeatureTitle from "../Components/Features/FeatureTitle";
 import {
-  FeatureCard,
   FeatureCardFive,
   FeatureCardFour,
-  FeatureCardOne,
   FeatureCardSeven,
   FeatureCardSix,
   FeatureCardThree,
   FeatureCardTwo,
 } from "../Components/Features/Card";
 
-export const AppContext = createContext(DEFAULT_APP_CONTEXTS);
 
 const featureData = [
   {
@@ -75,18 +68,6 @@ const featureData = [
 const Features = () => {
   return (
     <>
-      <AppContext.Provider>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
         <div className={styles.container}>
           <div className={styles.left}>
             {featureData?.map((feature) => {
@@ -107,20 +88,8 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-        <div className={styles.block}>p</div>
-      </AppContext.Provider>
     </>
   );
 };
 
-export default transition(Features);
+export default Features;

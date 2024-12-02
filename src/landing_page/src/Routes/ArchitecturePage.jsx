@@ -3,8 +3,7 @@ import { HeroSection } from "../Components/HeroSection";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styles from "./Architecture.module.css";
-import { AppContext } from "./HomePage";
-import transition from "../transition";
+
 const architectureDetails = [
   {
     sn: "1",
@@ -21,23 +20,10 @@ const architectureDetails = [
       "https://cdn.discordapp.com/attachments/950584476658962473/1174716488679174214/Screenshot_from_2023-11-16_15-58-21.png",
     details:
       "The diagram below illustrates the mechanism by which Personal DAOs are updated while preserving user sovereignty and canister controller settings of each individual Personal DAO. The Updates are directly uploaded to the master copy, which the dev team maintains control over. From there, the Upgrades Store canister pulls those updates from the master copy and stores them. The other Personal DAO copies deployed to the internet computer may then make a request for those updates and then install those updates to themselves.",
-  },
-  // {
-  //   sn: "3",
-  //   header: "Verification of Canister Code",
-  //   details:
-  //     "Personal Dao is a web 3 application that is hosted completely on the internet computer. The application is meant to be a private server and treasury for owners of the utility NFTs and their respective communities. Users will be able to store their sentiments, files, photos, videos, contacts, passwords, secure notes, and cryptocurrencies.​​​ Users will also be able to keep a shared journal, and a shared treasury that is governed by members of the treasury.",
-  // },
-  // {
-  //   sn: "4",
-  //   header: "External System Dependencies",
-  //   details:
-  //     "Personal Dao is a web 3 application that is hosted completely on the internet computer. The application is meant to be a private server and treasury for owners of the utility NFTs and their respective communities. Users will be able to store their sentiments, files, photos, videos, contacts, passwords, secure notes, and cryptocurrencies.​​​ Users will also be able to keep a shared journal, and a shared treasury that is governed by members of the treasury.",
-  // },
+  }
 ];
 const ArchitecturePage = () => {
   return (
-    <AppContext.Provider>
       <div className={styles.container}>
         <HeroSection img="../../assets/bgSections.svg" text="Architecture" />
         {architectureDetails?.map((ad) => (
@@ -70,8 +56,7 @@ const ArchitecturePage = () => {
           </div>
         ))}
       </div>
-    </AppContext.Provider>
   );
 };
 
-export default transition(ArchitecturePage);
+export default ArchitecturePage;

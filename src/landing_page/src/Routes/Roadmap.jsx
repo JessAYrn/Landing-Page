@@ -1,14 +1,11 @@
 import React from "react";
 import styles from "./Roadmap.module.scss";
 import { HeroSection } from "../Components/HeroSection";
-import { AppContext } from "./HomePage";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import transition from "../transition";
 
 const Roadmap = () => {
   return (
-    <AppContext.Provider>
       <div className={styles.container}>
         <HeroSection img="../../assets/bgSections.svg" text="Roadmap" />
 
@@ -182,8 +179,7 @@ const Roadmap = () => {
           </Accordion>
         </div>
       </div>
-    </AppContext.Provider>
   );
 };
 
-export default transition(Roadmap);
+export default Roadmap;
