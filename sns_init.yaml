@@ -112,9 +112,44 @@ NnsProposal:
 
     # The description of the proposal. Must be a string of 10 to 2,000 bytes.
     summary: >
-        Proposal to create an SNS for Personal DAO.
-        The SNS will be initialized with the following neurons:
-        ...
+        **I. Token Distribution** 
+        
+        * Allocated to Treasury - 63%
+        * Allocated to SNS Swap - 20% 
+        * Team & Advisors - 17%
+        * The Ledger Transaction fee is 0.01 CANI
+        
+        **II. Governance**
+
+        The governance model includes staking, voting, and other relevant details.
+        The minimum amount of SNS tokens to stake a neuron is 50 tokens. The minimum dissolve 
+        delay a neuron must have to be able to cast votes on proposals is 1 month and the
+        maximum dissolve delay is 3 years.
+
+        Decentralization Sale
+        * Min participation - 1 ICP
+        * Min participants - 10
+        * Min to be raised - 50,000 ICP
+        * Max to be raised - 250,000 ICP
+
+        **III. The DApps**
+        
+        Cani ecosystem consists of a set of dpps including services deployed on EU subnet, 
+        with the SNS directly controlling the following canisters.
+        
+        * cani_dao: tlcef-5iaaa-aaaas-akjmq-cai
+        * cani_indexer: tqhya-hqaaa-aaaas-akjoa-cai
+        * cani_platform: tfajn-gyaaa-aaaas-akjnq-cai
+        * cani_user: tcbpz-laaaa-aaaas-akjna-cai
+        
+        **IV. Verification**
+        
+        The above details can be verified through:
+        * Whitepaper: https://docs.canistore.io/
+        * Github: https://github.com/Canistore/CANI_DAPP/
+        * Product: https://canistore.app/, https://canistore.app/, https://caniplay.app/
+        * Product video: https://###.com/###/
+        * Main website: https://canistore.io/
 
 # If the SNS launch attempt fails, control over the dapp canister(s) is given to
 # these principals. In most use cases, this is chosen to be the original set of
