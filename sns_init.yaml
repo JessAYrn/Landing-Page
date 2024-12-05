@@ -64,7 +64,7 @@ name: Personal DAO
 # Description of the SNS project.
 # Must be a string of at most 2,000 bytes.
 description: >
-    Personal DAOs are turnkey DAOs in which every component of the DAO (UI, API, and
+  Personal DAOs are turnkey DAOs in which every component of the DAO (UI, API, and
   Database) is coded within smart contracts that rest under the sole custodies of 
   the respective communities that operate them. This provides communities with 100% 
   sovereignty over the digital product that they rely upon and it avoids the aggregation 
@@ -91,7 +91,7 @@ description: >
 # Must have less than 341,334 bytes. The only supported format is PNG.
 # Consider that NNS dapp will render the image with a 1:1 aspect ratio and
 # cropped to a circle.
-logo: src/landing_page/assets/pd-logo.png
+logo: pd-logo.png
 
 # URL that represents the SNS, usually a dapp controlled by the SNS project.
 # Must be a string from 10 to 512 bytes, and the domain must be HTTPS.
@@ -101,14 +101,14 @@ url: https://gsnnn-ziaaa-aaaag-acaaa-cai.icp0.io/
 # shown only in the NNS proposal.
 NnsProposal:
     # The title of the NNS proposal. Must be a string of 4 to 256 bytes.
-    title: "NNS Proposal to create the Personal DAO SNS"
+    title: "NNS Proposal to create an SNS named 'Personal DAO'"
 
     # The HTTPS address of a forum post with additional context required to evaluate the NNS
     # proposal.
     # This will go in the `url` field of the proposal.
     # Must be a string of 10 to 2,048 bytes.
     # The protocol must be HTTPS, and the domain must be forum.dfinity.org.
-    url: "https://forum.dfinity.org/t/personal-dao-sns-launch/"
+    url: https://forum.dfinity.org/t/personal-dao-sns-launch/
 
     # The description of the proposal. Must be a string of 10 to 2,000 bytes.
     summary: >
@@ -145,7 +145,7 @@ dapp_canisters:
 Token:
     # The name of the token issued by the SNS ledger.
     # Must be a string of 4 to 255 bytes without leading or trailing spaces.
-    name: Personal DAO Token
+    name: Personal DAO
 
     # The symbol of the token issued by the SNS Ledger.
     # Must be a string of 3 to 10 bytes without leading or trailing spaces.
@@ -551,7 +551,7 @@ Distribution:
         # as the treasury. This is initialized in a special sub-account, as the
         # main account of Governance is the minting account of the SNS Ledger.
         # This field is specified as a token. For instance, "1 token".
-        governance: 9_712_500 tokens
+        treasury: 9_712_500 tokens
 
         # The initial SNS token balance of the Swap canister is what will be
         # available for the decentralization swap. These tokens will be swapped
@@ -595,12 +595,15 @@ Swap:
     # The minimum amount of ICP that each participant must contribute
     # to participate. This field is specified as a token. For instance,
     # "1 token".
-    minimum_participant_icp:    1 tokens
+    minimum_participant_icp: 1 tokens
 
     # The maximum amount of ICP that each participant may contribute
     # to participate. This field is specified as a token. For instance,
     # "1 token".
     maximum_participant_icp: 100_000 tokens
+
+    confirmation_text: >
+        I confirm my understanding of the responsibilities and risks associated with participating in this token swap.
 
     # The text that swap participants must confirm before they may participate
     # in the swap.
@@ -618,8 +621,10 @@ Swap:
     #
     # Each list element must be an ISO 3166-1 alpha-2 country code.
     restricted_countries:
-        - AQ  # Antarctica
-
+        - KP # NORTH KOREA
+        - IR # IRAN
+        - CU # CUBA
+        - SY # SYRIAN ARAB REPUBLIC
     # Configuration of the vesting schedule of the neuron basket, i.e., the SNS
     # neurons that a participants will receive from a successful
     # decentralization swap.
