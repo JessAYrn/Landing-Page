@@ -1,5 +1,20 @@
-{   
-    "landing_page": {
-        "ic": "gsnnn-ziaaa-aaaag-acaaa-cai"
-    }
+{
+  "landing_page": {
+    "ic": "gsnnn-ziaaa-aaaag-acaaa-cai"
+  },
+  "sns_governance": {
+    "ic": "wqfq6-lyaaa-aaaap-qpmcq-cai"
+  },
+  "sns_index": {
+    "ic": "wzg3c-5qaaa-aaaap-qpmda-cai"
+  },
+  "sns_ledger": {
+    "ic": "w6h5w-qiaaa-aaaap-qpmdq-cai"
+  },
+  "sns_root": {
+    "ic": "xtjzy-7aaaa-aaaap-qpmea-cai"
+  },
+  "sns_swap": {
+    "ic": "xui7m-syaaa-aaaap-qpmeq-cai"
+  }
 }

@@ -4,25 +4,19 @@ name: Personal DAO
 description: >
   Personal DAOs are turnkey DAOs in which every component of the DAO (UI, API, and
   Database) is coded within smart contracts that rest under the sole custodies of 
-  the respective communities that operate them. This provides communities with 100% 
-  sovereignty over the digital product that they rely upon and it avoids the aggregation 
-  of vast sums of value to a single point of attack. Personal DAOs operate as self-sustaining 
-  financial institutions that allow communities to conduct peer-to-peer lending without the need 
+  the respective communities that operate them. Personal DAOs operate as self-sustaining 
+  financial institutions that allow communities to conduct collaborative allocation of resources without the need 
   for any intermediaries at any level of the technical stack.
 
   Personal DAOs are built to serve the role of a readymade lending institution and revenue source for communities, 
   families, and organizations of all nations, but especially developing nations that have been unable to cultivate 
   effective lending institutions due to a combination of political instability, corruption, unreliable judicial systems, 
-  underdeveloped infrastructure, unsecured property rights and sheer incompetence from their governments. In the past, a 
-  community within an underdeveloped nation had no chance of establishing an efficient lending institution without first 
-  resolving all of the tremendous barriers that plague them. Today, using a Personal DAO, communities can deploy a 
-  peer-to-peer lending institution for less than $50 USD and can begin seeding a treasury that is owned, controlled, 
-  and governed by the community- with no intermediaries whatsoever. Property rights to profits, debts, and assets within 
-  a Personal DAO are upheld by the Personal DAO protocol itself which is secured by the Internet Computer Protocol.
-  In addition to functioning as a lending institution, Personal DAOs allow communities to allocate resources in a 
-  collaborative fashion by allowing them to grow and govern a treasury that may fund community initiatives to increase 
-  productive output. Contributions to productive output may come in the form of business ventures, educational campaigns, 
-  local infrastructure development projects, and any other objectives that a community might agree on.
+  underdeveloped infrastructure, unsecured property rights and sheer incompetence from their governments. Property rights 
+  to profits, debts, and assets within a Personal DAO are upheld by the Personal DAO protocol itself which is secured 
+  by the Internet Computer Protocol. In addition to functioning as a lending institution, Personal DAOs allow communities 
+  to allocate resources in a collaborative fashion by allowing them to grow and govern a treasury that may fund community 
+  initiatives to increase productive output. Contributions to productive output may come in the form of business ventures, 
+  educational campaigns, local infrastructure development projects, and any other objectives that a community might agree on.
 
 # Path to the SNS Project logo on the local filesystem. The path is relative
 # to the configuration file's location, unless an absolute path is given.
@@ -228,7 +222,7 @@ Distribution:
         - principal: ctxle-npx2f-chovw-pd6nx-m3l22-kqhk3-i4hj4-6tdub-s54lz-hcrbk-rae
           stake: 6_037_500 tokens
           memo: 0
-          dissolve_delay: 12 months
+          dissolve_delay: 9 months
           vesting_period: 3 months
 
     # The initial SNS token balances of the various canisters of the SNS.
@@ -237,12 +231,12 @@ Distribution:
         # as the treasury. This is initialized in a special sub-account, as the
         # main account of Governance is the minting account of the SNS Ledger.
         # This field is specified as a token. For instance, "1 token".
-        treasury: 9_712_500 tokens
+        treasury: 6_562_500 tokens
 
         # The initial SNS token balance of the Swap canister is what will be
         # available for the decentralization swap. These tokens will be swapped
         # for ICP. This field is specified as a token. For instance, "1 token".
-        swap: 5_250_000 tokens
+        swap: 8_400_000 tokens
 
     # Checksum of the total number of tokens distributed in this section.
     # This field is specified as a token. For instance, "1 token".
@@ -262,7 +256,7 @@ Swap:
     # to the deadline or the maximum target being reached, and if there are less
     # than `minimum_participants` (here, only direct participants are counted),
     # the swap will be committed.
-    minimum_participants: 1
+    minimum_participants: 20
 
     # Minimum amount of ICP from direct participants. This amount is required for
     # the swap to succeed. If this amount is not achieved, the swap will be
@@ -286,7 +280,7 @@ Swap:
     # The maximum amount of ICP that each participant may contribute
     # to participate. This field is specified as a token. For instance,
     # "1 token".
-    maximum_participant_icp: 100_000 tokens
+    maximum_participant_icp: 25_000 tokens
 
     # The text that swap participants must confirm before they may participate
     # in the swap.
@@ -316,7 +310,7 @@ Swap:
         # many neurons will be in each participant's neuron basket. Note that
         # the first neuron in each neuron basket will have zero dissolve delay.
         # This value should thus be greater than or equal to `2`.
-        events: 2
+        events: 7
 
         # The interval at which the schedule will be increased per event. The
         # first neuron in the basket will be unlocked with zero dissolve delay.
@@ -329,7 +323,7 @@ Swap:
         # neurons. While neuron basket neurons do not use `vesting_period`, they
         # have a vesting schedule. This field is specified as a duration. For
         # example: "1 month".
-        interval: 3 month
+        interval: 1 month
 
     # Absolute time of day when the decentralization swap is supposed to start.
     #
