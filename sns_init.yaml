@@ -2,10 +2,10 @@ name: Personal DAO
 
 # Description of the SNS project.
 description: >
-  Personal DAOs are turnkey DAOs in which every component of the DAO (UI, API, and
-  Database) is coded within smart contracts that rest under the sole custodies of 
+  Personal DAOs are turnkey DAOs in which every component of the DAO (UI, API,
+  Database and AI model) is coded within smart contracts that rest under the sole custodies of 
   the respective communities that operate them. Personal DAOs operate as self-sustaining 
-  financial institutions that allow communities to conduct collaborative allocation of resources without the need 
+  financial institutions and Decentralized AI agents that allow communities to conduct collaborative allocation of resources without the need 
   for any intermediaries at any level of the technical stack.
 
   Personal DAOs are built to serve the role of a readymade lending institution and revenue source for communities, 
@@ -39,7 +39,7 @@ NnsProposal:
 
     # The description of the proposal. Must be a string of 10 to 2,000 bytes.
     summary: >
-      This is a test
+      The Personal DAO SNS aims to introduce DAO token, the token that will power the Personal DAO ecosystem.
 
 # If the SNS launch attempt fails, control over the dapp canister(s) is given to
 # these principals. In most use cases, this is chosen to be the original set of
@@ -130,7 +130,7 @@ Voting:
             # This field is specified as a percentage. For instance, 
             # a value of "100%" means that the voting power will be doubled
             # (multiplied by 2).
-            bonus: 0%
+            bonus: 100%
 
         # Users with neurons staked in the non-dissolving state for a long
         # period of time are incentivized to take the long-term interests of
@@ -153,7 +153,7 @@ Voting:
             # This field is specified as a percentage. For instance, 
             # a value of "25%" means that the voting power will increase by a quarter
             # (multiplied by 1.25).
-            bonus: 0%
+            bonus: 25%
 
     # Configuration of SNS voting reward parameters.
     #
@@ -176,13 +176,13 @@ Voting:
     RewardRate:
         # The initial reward rate at which the SNS voting rewards will increase
         # per year. This field is specified as a percentage. For example: "15%".
-        initial: 0%
+        initial: 5%
 
         # The final reward rate at which the SNS voting rewards will increase
         # per year. This rate is reached after `transition_duration` and remains
         # at this level unless changed by an SNS proposal. This field is
         # specified as a percentage. For example: "5%".
-        final: 0%
+        final: 2%
 
         # The voting reward rate falls quadratically from `initial` to `final`
         # over the time period defined by `transition_duration`.
@@ -190,7 +190,7 @@ Voting:
         # Values of 0 result in the reward rate always being `final`.
         #
         # This field is specified as a duration. For example: "8 years".
-        transition_duration: 0 years
+        transition_duration: 8 years
 
 # Configuration of the initial token distribution of the SNS. You can configure
 # how SNS tokens are distributed in each of the three groups:
@@ -220,10 +220,60 @@ Distribution:
         #
         # For testing, propose_sns.sh will fill this in automatically.
         - principal: ctxle-npx2f-chovw-pd6nx-m3l22-kqhk3-i4hj4-6tdub-s54lz-hcrbk-rae
-          stake: 6_037_500 tokens
+          stake: 5_670_000 tokens
           memo: 0
           dissolve_delay: 9 months
           vesting_period: 3 months
+
+        - principal: 7tzhq-rtbv5-drew2-i2abo-laksv-gafai-aihx2-iflti-ookhx-wvy2l-mqe
+          stake: 52_500 tokens
+          memo: 0
+          dissolve_delay: 9 months
+          vesting_period: 3 months
+        
+        - principal: 4kfwy-5sh7o-7fl7w-6empm-alupy-k2kvp-mugdh-w7heh-7gwhw-7qeg4-jae
+          stake: 52_500 tokens
+          memo: 0
+          dissolve_delay: 9 months
+          vesting_period: 3 months
+
+        - principal: rwyai-n4w4q-zfjgv-7qxxh-jtx6q-7t7vh-t3nnu-h6nr7-df66p-ckc3t-yae
+          stake: 52_500 tokens
+          memo: 0
+          dissolve_delay: 9 months
+          vesting_period: 3 months
+        
+        - principal: mnxir-tztfk-lytpz-ftods-jjto7-ayptm-2thiq-fdge2-puwzw-zhwts-sae
+          stake: 52_500 tokens
+          memo: 0
+          dissolve_delay: 9 months
+          vesting_period: 3 months
+
+        - principal: 4rkcu-n7jkh-hgbnk-xvpye-kxh7i-nqkie-43afd-qirus-vaahn-5qmmb-lqe
+          stake: 210_000 tokens
+          memo: 0
+          dissolve_delay: 9 months
+          vesting_period: 3 months
+        
+        - principal: 3s7vw-5xt5d-va2qi-ndpm7-otexb-zazmr-u3e6n-yv7ic-kqobo-7gc3m-nae
+          stake: 210_000 tokens
+          memo: 0
+          dissolve_delay: 9 months
+          vesting_period: 3 months
+
+        - principal: fiyjf-6qovk-w6vuy-wnnux-pg4py-c5o56-tgdit-ibdgf-meadt-cmupr-xae
+          stake: 210_000 tokens
+          memo: 0
+          dissolve_delay: 9 months
+          vesting_period: 3 months
+        
+        - principal: 4i2nf-3aos3-bimwc-mx7dw-blv5i-2gb73-higft-rdnwy-yp3t5-s4bsr-yqe
+          stake: 210_000 tokens
+          memo: 0
+          dissolve_delay: 9 months
+          vesting_period: 3 months
+
+
 
     # The initial SNS token balances of the various canisters of the SNS.
     InitialBalances:
@@ -231,12 +281,12 @@ Distribution:
         # as the treasury. This is initialized in a special sub-account, as the
         # main account of Governance is the minting account of the SNS Ledger.
         # This field is specified as a token. For instance, "1 token".
-        treasury: 6_562_500 tokens
+        treasury: 4_200_000 tokens
 
         # The initial SNS token balance of the Swap canister is what will be
         # available for the decentralization swap. These tokens will be swapped
         # for ICP. This field is specified as a token. For instance, "1 token".
-        swap: 8_400_000 tokens
+        swap: 10_080_000 tokens
 
     # Checksum of the total number of tokens distributed in this section.
     # This field is specified as a token. For instance, "1 token".
@@ -256,7 +306,7 @@ Swap:
     # to the deadline or the maximum target being reached, and if there are less
     # than `minimum_participants` (here, only direct participants are counted),
     # the swap will be committed.
-    minimum_participants: 20
+    minimum_participants: 1
 
     # Minimum amount of ICP from direct participants. This amount is required for
     # the swap to succeed. If this amount is not achieved, the swap will be
@@ -270,7 +320,7 @@ Swap:
     # direct participants (`minimum_participants`) is reached (otherwise, it
     # would be aborted).
     # Must be at least `min_participants * minimum_direct_participation_icp`.
-    maximum_direct_participation_icp: 1_000_000 tokens
+    maximum_direct_participation_icp: 150_000 tokens
 
     # The minimum amount of ICP that each participant must contribute
     # to participate. This field is specified as a token. For instance,
@@ -354,7 +404,7 @@ Swap:
     # The duration of the decentralization swap. When `start_time` is calculated
     # during CreateServiceNervousSystem proposal execution, this `duration` will
     # be added to that absolute time and set as the swap's deadline.
-    duration: 18 days
+    duration: 14 days
 
     # Whether Neurons' Fund participation is requested.
     neurons_fund_participation: true
