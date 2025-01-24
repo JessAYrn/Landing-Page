@@ -130,7 +130,7 @@ Voting:
             # This field is specified as a percentage. For instance, 
             # a value of "100%" means that the voting power will be doubled
             # (multiplied by 2).
-            bonus: 100%
+            bonus: 25%
 
         # Users with neurons staked in the non-dissolving state for a long
         # period of time are incentivized to take the long-term interests of
@@ -176,13 +176,13 @@ Voting:
     RewardRate:
         # The initial reward rate at which the SNS voting rewards will increase
         # per year. This field is specified as a percentage. For example: "15%".
-        initial: 5%
+        initial: 2%
 
         # The final reward rate at which the SNS voting rewards will increase
         # per year. This rate is reached after `transition_duration` and remains
         # at this level unless changed by an SNS proposal. This field is
         # specified as a percentage. For example: "5%".
-        final: 2%
+        final: 1%
 
         # The voting reward rate falls quadratically from `initial` to `final`
         # over the time period defined by `transition_duration`.
