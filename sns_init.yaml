@@ -124,7 +124,7 @@ Voting:
             # This parameter sets the maximum dissolve delay a neuron can have.
             # When reached, the maximum dissolve delay bonus will be applied.
             # This field is specified as a duration. For example: "8 years".
-            duration: 1 year
+            duration: 6 months
             # If a neuron's dissolve delay is `duration`, its voting power will
             # be increased by the dissolve delay `bonus` amount. 
             # This field is specified as a percentage. For instance, 
@@ -147,7 +147,7 @@ Voting:
             # the maximum age bonus. Once this age is reached, the neuron will
             # continue to age, but no more bonus will be applied. This field
             # is specified as a duration. For example: "2 years".
-            duration: 1 year
+            duration: 6 months
             # If a neuron's age is `duration` or older, its voting power will be
             # increased by this age`bonus` amount. 
             # This field is specified as a percentage. For instance, 
@@ -220,58 +220,64 @@ Distribution:
         #
         # For testing, propose_sns.sh will fill this in automatically.
         - principal: ctxle-npx2f-chovw-pd6nx-m3l22-kqhk3-i4hj4-6tdub-s54lz-hcrbk-rae
-          stake: 5_670_000 tokens
+          stake: 2_835_000 tokens
           memo: 0
-          dissolve_delay: 9 months
-          vesting_period: 3 months
+          dissolve_delay: 6 months
+          vesting_period: 12 months
+
+        - principal: ctxle-npx2f-chovw-pd6nx-m3l22-kqhk3-i4hj4-6tdub-s54lz-hcrbk-rae
+          stake: 2_835_000 tokens
+          memo: 1
+          dissolve_delay: 6 months
+          vesting_period: 24 months
 
         - principal: 7tzhq-rtbv5-drew2-i2abo-laksv-gafai-aihx2-iflti-ookhx-wvy2l-mqe
           stake: 52_500 tokens
           memo: 0
-          dissolve_delay: 9 months
-          vesting_period: 3 months
+          dissolve_delay: 6 months
+          vesting_period: 24 months
         
         - principal: 4kfwy-5sh7o-7fl7w-6empm-alupy-k2kvp-mugdh-w7heh-7gwhw-7qeg4-jae
           stake: 52_500 tokens
           memo: 0
-          dissolve_delay: 9 months
-          vesting_period: 3 months
+          dissolve_delay: 6 months
+          vesting_period: 24 months
 
         - principal: rwyai-n4w4q-zfjgv-7qxxh-jtx6q-7t7vh-t3nnu-h6nr7-df66p-ckc3t-yae
           stake: 52_500 tokens
           memo: 0
-          dissolve_delay: 9 months
-          vesting_period: 3 months
+          dissolve_delay: 6 months
+          vesting_period: 24 months
         
         - principal: mnxir-tztfk-lytpz-ftods-jjto7-ayptm-2thiq-fdge2-puwzw-zhwts-sae
           stake: 52_500 tokens
           memo: 0
-          dissolve_delay: 9 months
-          vesting_period: 3 months
+          dissolve_delay: 6 months
+          vesting_period: 24 months
 
         - principal: 4rkcu-n7jkh-hgbnk-xvpye-kxh7i-nqkie-43afd-qirus-vaahn-5qmmb-lqe
           stake: 210_000 tokens
           memo: 0
-          dissolve_delay: 9 months
-          vesting_period: 3 months
+          dissolve_delay: 6 months
+          vesting_period: 24 months
         
         - principal: 3s7vw-5xt5d-va2qi-ndpm7-otexb-zazmr-u3e6n-yv7ic-kqobo-7gc3m-nae
           stake: 210_000 tokens
           memo: 0
-          dissolve_delay: 9 months
-          vesting_period: 3 months
+          dissolve_delay: 6 months
+          vesting_period: 24 months
 
         - principal: fiyjf-6qovk-w6vuy-wnnux-pg4py-c5o56-tgdit-ibdgf-meadt-cmupr-xae
           stake: 210_000 tokens
           memo: 0
-          dissolve_delay: 9 months
-          vesting_period: 3 months
+          dissolve_delay: 6 months
+          vesting_period: 24 months
         
         - principal: 4i2nf-3aos3-bimwc-mx7dw-blv5i-2gb73-higft-rdnwy-yp3t5-s4bsr-yqe
           stake: 210_000 tokens
           memo: 0
-          dissolve_delay: 9 months
-          vesting_period: 3 months
+          dissolve_delay: 6 months
+          vesting_period: 24 months
 
 
 
@@ -281,7 +287,7 @@ Distribution:
         # as the treasury. This is initialized in a special sub-account, as the
         # main account of Governance is the minting account of the SNS Ledger.
         # This field is specified as a token. For instance, "1 token".
-        treasury: 4_200_000 tokens
+        governance: 4_200_000 tokens
 
         # The initial SNS token balance of the Swap canister is what will be
         # available for the decentralization swap. These tokens will be swapped
@@ -308,11 +314,12 @@ Swap:
     # the swap will be committed.
     minimum_participants: 1
 
+
     # Minimum amount of ICP from direct participants. This amount is required for
     # the swap to succeed. If this amount is not achieved, the swap will be
     # aborted (instead of committed) when the due date/time occurs.
     # Must be smaller than or equal than `maximum_direct_participation_icp`.
-    minimum_direct_participation_icp: 1 tokens
+    minimum_direct_participation_icp: 5 tokens
 
     # Maximum amount of ICP from direct participants. If this amount is achieved,
     # the swap will finalize immediately, without waiting for the due date/time;
@@ -320,17 +327,17 @@ Swap:
     # direct participants (`minimum_participants`) is reached (otherwise, it
     # would be aborted).
     # Must be at least `min_participants * minimum_direct_participation_icp`.
-    maximum_direct_participation_icp: 150_000 tokens
+    maximum_direct_participation_icp: 50_000 tokens
 
     # The minimum amount of ICP that each participant must contribute
     # to participate. This field is specified as a token. For instance,
     # "1 token".
-    minimum_participant_icp: 1 tokens
+    minimum_participant_icp: 5 tokens
 
     # The maximum amount of ICP that each participant may contribute
     # to participate. This field is specified as a token. For instance,
     # "1 token".
-    maximum_participant_icp: 25_000 tokens
+    maximum_participant_icp: 5_000 tokens
 
     # The text that swap participants must confirm before they may participate
     # in the swap.
