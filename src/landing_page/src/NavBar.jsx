@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Tabs, Tab } from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
+import { BACKGROUND_COLOR } from "./theme";
 
 
 export const ROUTES = {
@@ -20,7 +21,7 @@ const NavBar = () => {
     const navigate = useNavigate();
 
     return (
-        <Box xs={12} width={"100%"} display={"flex"} justifyContent={"center"} alignItems={"right"} sx={{position: "fixed", top: "0", right: "0", zIndex: "1000"}}>
+        <Box xs={12} width={"100%"} display={"flex"} justifyContent={"center"} alignItems={"right"} sx={{ position: "fixed", top: "0", right: "0", zIndex: "1000", backgroundColor: BACKGROUND_COLOR}}>
             <Tabs 
                 sx={{ height: "43px", minHeight: "auto"}}
                 value={selectedTab} 

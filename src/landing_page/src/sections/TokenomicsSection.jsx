@@ -1,11 +1,11 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import {  WHITE_COLOR } from "../theme";
 import Typography from "@mui/material/Typography";
+import { WHITE_COLOR } from "../theme";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-const WhitePaper = () => {
+const Tokenomics = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -13,13 +13,14 @@ const WhitePaper = () => {
         <Grid container display="flex" justifyContent="center" alignItems="center" height="700px" marginTop={"100px"}>
             {isMobile ? 
                 <Typography textAlign="center" variant="h4" color={WHITE_COLOR}>Your web browser doesn't have a PDF plugin.
-                    Instead you can <a href="personalDao.pdf" style={{color: WHITE_COLOR}}>click here to
-                    view the White Paper PDF.</a>
-                </Typography> : 
-                <object frameborder="0" data="personalDao.pdf" type="application/pdf" height="100%" style={{color: WHITE_COLOR, width: "100%", maxWidth: "760px", borderRadius: "10px"}}>
+                    Instead you can <a href="tokenomics.pdf" style={{color: WHITE_COLOR}}>click here to
+                    view the Tokenomics PDF.</a>
+                </Typography>
+             : 
+                <object frameborder="0" data="tokenomics.pdf" type="application/pdf" height="100%" style={{color: WHITE_COLOR, width: "100%", maxWidth: "760px", borderRadius: "10px"}}>
                     <Typography textAlign="center" variant="h4" color={WHITE_COLOR}>Your web browser doesn't have a PDF plugin.
-                        Instead you can <a href="personalDao.pdf" style={{color: WHITE_COLOR}}>click here to
-                        view the White Paper PDF.</a>
+                        Instead you can <a href="tokenomics.pdf" style={{color: WHITE_COLOR}}>click here to
+                        view the Tokenomics PDF.</a>
                     </Typography>
                 </object>
             }
@@ -27,4 +28,4 @@ const WhitePaper = () => {
     )
 }
 
-export default WhitePaper;
+export default Tokenomics;

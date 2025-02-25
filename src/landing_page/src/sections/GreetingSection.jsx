@@ -4,19 +4,22 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Paper from "@mui/material/Paper";
+import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { WHITE_COLOR, BACKGROUND_COLOR, CONTRAST_COLOR } from "../theme";
+import { ROUTES } from "../NavBar";
 
 const GreetingSection = () => {
 
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    console.log("isMobile: ", isMobile);
+    const navigate = useNavigate();
+
 
     return (
         <Grid container
           style={{
-            backgroundImage: `url("assets/bgImage-1.jpg")`,
+            backgroundImage: `url("bgImage-1.jpg")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -30,28 +33,30 @@ const GreetingSection = () => {
             alignItems="center" 
             flexDirection="column"
         >
-            <Grid xs={12} width={"100%"} maxWidth={"830px"} display="flex" justifyContent="center" alignItems="center" flexDirection="column" marginTop={"100px"} marginBottom={"100px"}>
+            <Grid xs={12} width={"100%"} maxWidth={"830px"} display="flex" justifyContent="center" alignItems="center" flexDirection="column" marginTop={"100px"} marginBottom={"100px"} padding={"10px"}>
                 <Typography textAlign="left" sx={{color: WHITE_COLOR, width: "100%", maxWidth: "830px"}} variant={isMobile ? "h4" : "h2"}>Community Owned</Typography>
                 <Typography textAlign="right" sx={{color: CONTRAST_COLOR, width: "100%", maxWidth: "830px"}} variant={isMobile ? "h4" : "h2"}>Lending Marketplaces</Typography>
             </Grid>
-            <Grid xs={12} display="flex" height="100%" justifyContent="start" alignItems="center" width={"100%"} >
-                <Grid xs={7} height="100%" display="flex" justifyContent="center" alignItems="center" flexDirection="column">
+            <Grid xs={12} display="flex" height="100%" justifyContent="center" alignItems="center" width={"100%"} padding={"10px"}>
+                <Grid xs={7} height="100%" display="flex" justifyContent="start" alignItems="center" flexDirection="column">
                     <Grid height="50%" display="flex" justifyContent="start" alignItems="center" flexDirection="column">
                         <Typography textAlign="left" sx={{color: WHITE_COLOR, maxWidth: "425px", marginBottom: "20px"}} variant={isMobile ? "h5" : "h4"}>
                             Receive loans backed by crypto assets.
                         </Typography>
-                        <Typography textAlign="left" sx={{color: WHITE_COLOR, maxWidth: "425px"}} variant={isMobile ? "h5" : "h4"}>
+                        <Typography textAlign="left" sx={{color: WHITE_COLOR, maxWidth: "425px", marginBottom: "20px"}} variant={isMobile ? "h5" : "h4"}>
                             Earn interest by lending to borrowers.
                         </Typography>
-                    </Grid>
-                    <Grid height="50%" display="flex" justifyContent="center" alignItems="center" flexDirection="column">
-                        <Button variant="contained" color="primary">
-                            Join A DAO Community
-                        </Button>
+                        <Grid xs={12} display="flex" justifyContent="left" alignItems="center" width="100%">
+                            <Button variant="contained" style={{backgroundColor: "#1390ff", color: WHITE_COLOR, width: "90%" }} onClick={() => navigate(ROUTES.daos)}>
+                                Join A DAO
+                            </Button>
+                        </Grid>
                     </Grid>
                 </Grid>
-                <Grid xs={5} display="flex" justifyContent="right" alignItems="center" flexDirection="column">
-                    <img src="assets/PDAO-screenshot.jpeg" alt="Personal DAO Logo" style={{ height: isMobile ? "255px" : "460px", borderRadius: "10px", border: `solid ${WHITE_COLOR}`}} />
+                <Grid xs={4} display="flex" justifyContent="right" alignItems="center" flexDirection="column">
+                    <Grid xs={12} height="100%" display="flex" justifyContent="center" alignItems="center" flexDirection="column" width="100%">
+                        <img src="PDAO-screenshot.jpeg" alt="Personal DAO Logo" style={{ height: isMobile ? "220px" : "360px", borderRadius: "10px", border: `solid ${WHITE_COLOR}`}} />
+                    </Grid>
                 </Grid>
             </Grid>
             <Grid xs={12} display="flex" justifyContent="center" alignItems="center" flexDirection="column" marginTop={"70px"}>
