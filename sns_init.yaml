@@ -46,6 +46,9 @@ NnsProposal:
 # controller(s) of the dapp. Must be a list of PrincipalIds.
 fallback_controller_principals:
     - ctxle-npx2f-chovw-pd6nx-m3l22-kqhk3-i4hj4-6tdub-s54lz-hcrbk-rae
+    - olig4-vjhkl-b63eh-zjqdm-pvmdk-wmkhv-lvfid-q4zrn-4izt5-bbqov-uqe
+
+
 
 # The list of dapp canister(s) that will be decentralized if the
 # decentralization swap succeeds.
@@ -220,37 +223,25 @@ Distribution:
         #
         # For testing, propose_sns.sh will fill this in automatically.
         - principal: ctxle-npx2f-chovw-pd6nx-m3l22-kqhk3-i4hj4-6tdub-s54lz-hcrbk-rae
-          stake: 2_835_000 tokens
+          stake: 2_625_000 tokens
           memo: 0
           dissolve_delay: 6 months
           vesting_period: 12 months
 
-        - principal: ctxle-npx2f-chovw-pd6nx-m3l22-kqhk3-i4hj4-6tdub-s54lz-hcrbk-rae
-          stake: 2_835_000 tokens
-          memo: 1
-          dissolve_delay: 6 months
-          vesting_period: 24 months
-
-        - principal: 7tzhq-rtbv5-drew2-i2abo-laksv-gafai-aihx2-iflti-ookhx-wvy2l-mqe
-          stake: 52_500 tokens
+        - principal: ansma-wulvp-4w57n-m26r5-4gdzz-sl2zu-aokzk-v3i5i-ch4ct-2oxrx-qqe
+          stake: 2_625_000 tokens
           memo: 0
           dissolve_delay: 6 months
           vesting_period: 24 months
         
-        - principal: 4kfwy-5sh7o-7fl7w-6empm-alupy-k2kvp-mugdh-w7heh-7gwhw-7qeg4-jae
-          stake: 52_500 tokens
+        - principal: v7i7x-wxe53-jrla5-whvql-is226-3q222-gprw5-r45xl-25yo2-oqura-wae
+          stake: 210_000 tokens
           memo: 0
           dissolve_delay: 6 months
           vesting_period: 24 months
 
-        - principal: rwyai-n4w4q-zfjgv-7qxxh-jtx6q-7t7vh-t3nnu-h6nr7-df66p-ckc3t-yae
-          stake: 52_500 tokens
-          memo: 0
-          dissolve_delay: 6 months
-          vesting_period: 24 months
-        
-        - principal: mnxir-tztfk-lytpz-ftods-jjto7-ayptm-2thiq-fdge2-puwzw-zhwts-sae
-          stake: 52_500 tokens
+        - principal: b52hk-urklk-qb2eu-lgbx6-ucqdn-do3oe-dcnew-lolkd-arvbz-u7ytt-6ae
+          stake: 210_000 tokens
           memo: 0
           dissolve_delay: 6 months
           vesting_period: 24 months
@@ -287,7 +278,7 @@ Distribution:
         # as the treasury. This is initialized in a special sub-account, as the
         # main account of Governance is the minting account of the SNS Ledger.
         # This field is specified as a token. For instance, "1 token".
-        governance: 4_200_000 tokens
+        governance: 4_410_000 tokens
 
         # The initial SNS token balance of the Swap canister is what will be
         # available for the decentralization swap. These tokens will be swapped
@@ -319,7 +310,7 @@ Swap:
     # the swap to succeed. If this amount is not achieved, the swap will be
     # aborted (instead of committed) when the due date/time occurs.
     # Must be smaller than or equal than `maximum_direct_participation_icp`.
-    minimum_direct_participation_icp: 5 tokens
+    minimum_direct_participation_icp: 1 tokens
 
     # Maximum amount of ICP from direct participants. If this amount is achieved,
     # the swap will finalize immediately, without waiting for the due date/time;
@@ -327,7 +318,7 @@ Swap:
     # direct participants (`minimum_participants`) is reached (otherwise, it
     # would be aborted).
     # Must be at least `min_participants * minimum_direct_participation_icp`.
-    maximum_direct_participation_icp: 50_000 tokens
+    maximum_direct_participation_icp: 70_000 tokens
 
     # The minimum amount of ICP that each participant must contribute
     # to participate. This field is specified as a token. For instance,
@@ -337,7 +328,7 @@ Swap:
     # The maximum amount of ICP that each participant may contribute
     # to participate. This field is specified as a token. For instance,
     # "1 token".
-    maximum_participant_icp: 5_000 tokens
+    maximum_participant_icp: 15_000 tokens
 
     # The text that swap participants must confirm before they may participate
     # in the swap.
